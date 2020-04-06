@@ -940,7 +940,7 @@ describe('truncateDinos',() => {
         extinct: false
       },
       {
-        species: 'Eoraptor',
+        species: 'Eorapto...',
         period: 'Triassic',
         carnivore: true,
         extinct: false
