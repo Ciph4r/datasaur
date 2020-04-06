@@ -12,15 +12,12 @@ const makeDino = (species , period , carnivore , extinct = false) => {
 }
 
 const makeSingular = (obj) => {
-  const newobj = {...obj}
-  return obj.species.endsWith('us') ? (newobj.species = newobj.species.slice(0,obj.species.length-2) , newobj)  :  obj
+  return obj.species.endsWith('us') ? {...obj , species: obj.species.slice(0,obj.species.length-2)}  :  obj
 }
 
 const truncateSpecies = (obj) => {
-  const newobj = {...obj}
-  return obj.species.length > 7 ? (newobj.species = newobj.species.slice(0,7)+'...' , newobj)  :  obj
+  return obj.species.length > 7 ? {...obj , species: obj.species.slice(0,7)+'...'} :  obj
 }
-
 const makeExtinct = (obj) =>{
   return {...obj , extinct: true}
 }
